@@ -57,7 +57,7 @@ The inner screen is 951×669 points in landscape and 669×951 in portrait (2853�
 | No lock, Portrait lock | 871×669 | 669×871 |
 | Portrait lock + full screen | 469×669, centered | 669×871 |
 
-- **The app fills the screen, minus the status bar.** The window stops short of the status bar, leaving an 80-point black strip for it: along the top in portrait and down the right side in landscape.
+- **Without `UIRequiresFullScreen` the app fills the screen, minus the status bar.** The window stops short of the status bar, leaving an 80-point black strip for it: along the top in portrait and down the right side in landscape.
 - **Portrait lock on its own is ignored.** The portrait-locked app rotates to landscape and fills the screen, the same as the unlocked app.
 - **Portrait lock plus `UIRequiresFullScreen` keeps the app in portrait.** In landscape the app stays portrait, centered with black bars on each side.
   - That's the inner screen's portrait shape at the full landscape height. Content is drawn at normal size, not scaled.
