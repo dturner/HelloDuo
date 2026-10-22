@@ -66,3 +66,5 @@ The inner screen is 951×669 points in landscape and 669×951 in portrait (2853�
 - **SDK 27.0: full screen, minus the status bar.** The app is resized to the screen, less an 80-point strip for the status bar: along the top in portrait and down the right side in landscape.
 - **SDK 27.1: full screen.** The app is resized to the whole screen, and the status bar is drawn over it.
 - **Portrait lock + full screen (27.0 and 27.1), in landscape.** The app gets a 469×669 window, centered and pillarboxed. That's the inner screen's portrait shape at the full landscape height. Content is drawn at normal size, not scaled.
+  - Compared with SDK 26.5, the app has to lay out in a wider window at the same height: 469 points wide instead of 376, about 25% wider. In portrait the gap is larger, 669 points wide on 27.x against 375 on 26.5.
+  - This only applies with `UIRequiresFullScreen`. Without it, 27.x builds get the whole screen in landscape: 871 points wide on 27.0 and 951 on 27.1.
