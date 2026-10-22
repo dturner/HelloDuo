@@ -24,22 +24,22 @@ These screenshots were taken on the iPhone Duo simulator (iOS 27.1 runtime) with
 
 "Portrait" means the inner screen is taller than it is wide. On the open Duo, DeviceHub's Device → Orientation menu is a quarter-turn off: choosing **Landscape Left** gives a portrait inner screen, and choosing **Portrait** gives a landscape one.
 
-| SDK | Variant | Portrait | Landscape |
-|---|---|---|---|
-| 26.5 | No lock | <img src="screenshots/sdk26.5-min15.6--screen-portrait.png" height="250"> | <img src="screenshots/sdk26.5-min15.6--screen-landscape.png" height="250"><br>**Stays portrait, small window, rotate button** |
-| 26.5 | Portrait lock | <img src="screenshots/sdk26.5-min15.6-portrait--screen-portrait.png" height="250"> | <img src="screenshots/sdk26.5-min15.6-portrait--screen-landscape.png" height="250"><br>**Stays portrait, small window** |
-| 26.5 | Portrait lock + full screen | <img src="screenshots/sdk26.5-min15.6-portrait-fullscreen--screen-portrait.png" height="250"> | <img src="screenshots/sdk26.5-min15.6-portrait-fullscreen--screen-landscape.png" height="250"><br>**Stays portrait, small window** |
-| 27.0 | No lock | <img src="screenshots/sdk27.0-min15.6--screen-portrait.png" height="250"> | <img src="screenshots/sdk27.0-min15.6--screen-landscape.png" height="250"> |
-| 27.0 | Portrait lock | <img src="screenshots/sdk27.0-min15.6-portrait--screen-portrait.png" height="250"> | <img src="screenshots/sdk27.0-min15.6-portrait--screen-landscape.png" height="250"><br>**Rotates to landscape** |
-| 27.0 | Portrait lock + full screen | <img src="screenshots/sdk27.0-min15.6-portrait-fullscreen--screen-portrait.png" height="250"> | <img src="screenshots/sdk27.0-min15.6-portrait-fullscreen--screen-landscape.png" height="250"><br>**Stays portrait, with black bars** |
-| 27.1 | No lock | <img src="screenshots/sdk27.1-min15.6--screen-portrait.png" height="250"> | <img src="screenshots/sdk27.1-min15.6--screen-landscape.png" height="250"> |
-| 27.1 | Portrait lock | <img src="screenshots/sdk27.1-min15.6-portrait--screen-portrait.png" height="250"> | <img src="screenshots/sdk27.1-min15.6-portrait--screen-landscape.png" height="250"><br>**Rotates to landscape** |
-| 27.1 | Portrait lock + full screen | <img src="screenshots/sdk27.1-min15.6-portrait-fullscreen--screen-portrait.png" height="250"> | <img src="screenshots/sdk27.1-min15.6-portrait-fullscreen--screen-landscape.png" height="250"><br>**Stays portrait, with black bars** |
+| SDK | Variant | Portrait | Landscape | Notes |
+|---|---|---|---|---|
+| 26.5 | No lock | <img src="screenshots/sdk26.5-min15.6--screen-portrait.png" height="250"> | <img src="screenshots/sdk26.5-min15.6--screen-landscape.png" height="250"> | Runs in a small iPhone-sized window in both orientations. Portrait: zoom and rotate buttons shown. Landscape: stays portrait-shaped; zoom button removed, rotate button remains. |
+| 26.5 | Portrait lock | <img src="screenshots/sdk26.5-min15.6-portrait--screen-portrait.png" height="250"> | <img src="screenshots/sdk26.5-min15.6-portrait--screen-landscape.png" height="250"> | Runs in a small iPhone-sized window in both orientations. Portrait: zoom button shown. Landscape: stays portrait; zoom button removed. |
+| 26.5 | Portrait lock + full screen | <img src="screenshots/sdk26.5-min15.6-portrait-fullscreen--screen-portrait.png" height="250"> | <img src="screenshots/sdk26.5-min15.6-portrait-fullscreen--screen-landscape.png" height="250"> | Same as portrait lock: small iPhone-sized window. Portrait: zoom button shown. Landscape: stays portrait; zoom button removed. |
+| 27.0 | No lock | <img src="screenshots/sdk27.0-min15.6--screen-portrait.png" height="250"> | <img src="screenshots/sdk27.0-min15.6--screen-landscape.png" height="250"> | Fills the screen and rotates. Black strip for the status bar (top in portrait, right side in landscape). |
+| 27.0 | Portrait lock | <img src="screenshots/sdk27.0-min15.6-portrait--screen-portrait.png" height="250"> | <img src="screenshots/sdk27.0-min15.6-portrait--screen-landscape.png" height="250"> | Portrait lock ignored: rotates to landscape and fills the screen. Black status bar strip, as with no lock. |
+| 27.0 | Portrait lock + full screen | <img src="screenshots/sdk27.0-min15.6-portrait-fullscreen--screen-portrait.png" height="250"> | <img src="screenshots/sdk27.0-min15.6-portrait-fullscreen--screen-landscape.png" height="250"> | Landscape: stays portrait, centered with black bars on each side. |
+| 27.1 | No lock | <img src="screenshots/sdk27.1-min15.6--screen-portrait.png" height="250"> | <img src="screenshots/sdk27.1-min15.6--screen-landscape.png" height="250"> | Fills the screen and rotates. Edge to edge, with the status bar drawn over the app. |
+| 27.1 | Portrait lock | <img src="screenshots/sdk27.1-min15.6-portrait--screen-portrait.png" height="250"> | <img src="screenshots/sdk27.1-min15.6-portrait--screen-landscape.png" height="250"> | Portrait lock ignored: rotates to landscape and fills the screen. Edge to edge, as with no lock. |
+| 27.1 | Portrait lock + full screen | <img src="screenshots/sdk27.1-min15.6-portrait-fullscreen--screen-portrait.png" height="250"> | <img src="screenshots/sdk27.1-min15.6-portrait-fullscreen--screen-landscape.png" height="250"> | Landscape: stays portrait, centered with black bars on each side. Extra space above the content compared with 27.0. |
 
 ### Differences
 
 - **SDK 26.5 builds run in an iPhone-sized compatibility window.** In every variant the app runs in a small window centered on the inner screen, with black around it, in both orientations.
-  - In portrait, the system shows a resize button in the bottom-right corner of the screen.
+  - In portrait, the system shows a zoom button in the bottom-right corner of the screen. It is removed in landscape.
   - The no-lock build also shows a rotate button. In landscape it stays portrait-shaped and the rotate button remains.
   - Portrait lock and `UIRequiresFullScreen` make no visible difference, apart from those buttons.
 - **SDK 27.0 and 27.1 builds fill the inner screen**, except as noted below.
