@@ -22,19 +22,15 @@ DEVELOPER_DIR=/Applications/Xcode-27.1.0.app/Contents/Developer ./build-variants
 
 These screenshots were taken on the iPhone Duo simulator (iOS 27.1 runtime) with the device open. They are captured from the DeviceHub window, so they include the device frame. Each app was launched in portrait and then rotated to landscape while it was running.
 
-The inner screen is 951×669 points in landscape and 669×951 in portrait (2853×2007 pixels at 3× scale). Window sizes below are the app window as drawn on screen, measured from full-resolution simulator screenshots.
+The inner screen is 951×669 points in landscape and 669×951 in portrait (2853×2007 pixels at 3× scale). Window sizes under each screenshot are the app window, in points, as drawn on screen, measured from full-resolution simulator screenshots.
 
 ## SDK 26.5
 
 | Variant | Landscape | Portrait |
 | --- | --- | --- |
-| No lock | <img src="screenshots/sdk26.5-min15.6--screen-landscape.png" height="250"> | <img src="screenshots/sdk26.5-min15.6--screen-portrait.png" height="250"> |
-| Portrait lock | <img src="screenshots/sdk26.5-min15.6-portrait--screen-landscape.png" height="250"> | <img src="screenshots/sdk26.5-min15.6-portrait--screen-portrait.png" height="250"> |
-| Portrait lock + full screen | <img src="screenshots/sdk26.5-min15.6-portrait-fullscreen--screen-landscape.png" height="250"> | <img src="screenshots/sdk26.5-min15.6-portrait-fullscreen--screen-portrait.png" height="250"> |
-
-| Variant | Landscape window | Portrait window |
-| --- | --- | --- |
-| All variants | 376×669, centered | 375×667, centered |
+| No lock | <img src="screenshots/sdk26.5-min15.6--screen-landscape.png" height="250"><br>376×669, centered | <img src="screenshots/sdk26.5-min15.6--screen-portrait.png" height="250"><br>375×667, centered |
+| Portrait lock | <img src="screenshots/sdk26.5-min15.6-portrait--screen-landscape.png" height="250"><br>376×669, centered | <img src="screenshots/sdk26.5-min15.6-portrait--screen-portrait.png" height="250"><br>375×667, centered |
+| Portrait lock + full screen | <img src="screenshots/sdk26.5-min15.6-portrait-fullscreen--screen-landscape.png" height="250"><br>376×669, centered | <img src="screenshots/sdk26.5-min15.6-portrait-fullscreen--screen-portrait.png" height="250"><br>375×667, centered |
 
 - **The app runs in an iPhone-sized compatibility window.** It always gets a window the size of an iPhone SE, whatever its orientation settings, centered with black around it.
   - In portrait the window is 375×667.
@@ -48,14 +44,9 @@ The inner screen is 951×669 points in landscape and 669×951 in portrait (2853�
 
 | Variant | Landscape | Portrait |
 | --- | --- | --- |
-| No lock | <img src="screenshots/sdk27.0-min15.6--screen-landscape.png" height="250"> | <img src="screenshots/sdk27.0-min15.6--screen-portrait.png" height="250"> |
-| Portrait lock | <img src="screenshots/sdk27.0-min15.6-portrait--screen-landscape.png" height="250"> | <img src="screenshots/sdk27.0-min15.6-portrait--screen-portrait.png" height="250"> |
-| Portrait lock + full screen | <img src="screenshots/sdk27.0-min15.6-portrait-fullscreen--screen-landscape.png" height="250"> | <img src="screenshots/sdk27.0-min15.6-portrait-fullscreen--screen-portrait.png" height="250"> |
-
-| Variant | Landscape window | Portrait window |
-| --- | --- | --- |
-| No lock, Portrait lock | 871×669 | 669×871 |
-| Portrait lock + full screen | 469×669, centered | 669×871 |
+| No lock | <img src="screenshots/sdk27.0-min15.6--screen-landscape.png" height="250"><br>871×669 | <img src="screenshots/sdk27.0-min15.6--screen-portrait.png" height="250"><br>669×871 |
+| Portrait lock | <img src="screenshots/sdk27.0-min15.6-portrait--screen-landscape.png" height="250"><br>871×669 | <img src="screenshots/sdk27.0-min15.6-portrait--screen-portrait.png" height="250"><br>669×871 |
+| Portrait lock + full screen | <img src="screenshots/sdk27.0-min15.6-portrait-fullscreen--screen-landscape.png" height="250"><br>469×669, centered | <img src="screenshots/sdk27.0-min15.6-portrait-fullscreen--screen-portrait.png" height="250"><br>669×871 |
 
 - **Without `UIRequiresFullScreen` the app fills the screen, minus the status bar.** The window stops short of the status bar, leaving an 80-point black strip for it: along the top in portrait and down the right side in landscape.
 - **Portrait lock on its own is ignored.** The portrait-locked app rotates to landscape and fills the screen, the same as the unlocked app.
@@ -67,14 +58,9 @@ The inner screen is 951×669 points in landscape and 669×951 in portrait (2853�
 
 | Variant | Landscape | Portrait |
 | --- | --- | --- |
-| No lock | <img src="screenshots/sdk27.1-min15.6--screen-landscape.png" height="250"> | <img src="screenshots/sdk27.1-min15.6--screen-portrait.png" height="250"> |
-| Portrait lock | <img src="screenshots/sdk27.1-min15.6-portrait--screen-landscape.png" height="250"> | <img src="screenshots/sdk27.1-min15.6-portrait--screen-portrait.png" height="250"> |
-| Portrait lock + full screen | <img src="screenshots/sdk27.1-min15.6-portrait-fullscreen--screen-landscape.png" height="250"> | <img src="screenshots/sdk27.1-min15.6-portrait-fullscreen--screen-portrait.png" height="250"> |
-
-| Variant | Landscape window | Portrait window |
-| --- | --- | --- |
-| No lock, Portrait lock | 951×669 (full screen) | 669×951 (full screen) |
-| Portrait lock + full screen | 469×669, centered | 669×951 (full screen) |
+| No lock | <img src="screenshots/sdk27.1-min15.6--screen-landscape.png" height="250"><br>951×669 (full screen) | <img src="screenshots/sdk27.1-min15.6--screen-portrait.png" height="250"><br>669×951 (full screen) |
+| Portrait lock | <img src="screenshots/sdk27.1-min15.6-portrait--screen-landscape.png" height="250"><br>951×669 (full screen) | <img src="screenshots/sdk27.1-min15.6-portrait--screen-portrait.png" height="250"><br>669×951 (full screen) |
+| Portrait lock + full screen | <img src="screenshots/sdk27.1-min15.6-portrait-fullscreen--screen-landscape.png" height="250"><br>469×669, centered | <img src="screenshots/sdk27.1-min15.6-portrait-fullscreen--screen-portrait.png" height="250"><br>669×951 (full screen) |
 
 - **The app fills the whole screen.** It runs edge to edge, with the status bar drawn over the app's background.
 - **Portrait lock on its own is ignored.** The portrait-locked app rotates to landscape and fills the screen, the same as the unlocked app.
