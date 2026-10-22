@@ -24,17 +24,17 @@ These screenshots were taken on the iPhone Duo simulator (iOS 27.1 runtime) with
 
 "Portrait" means the inner screen is taller than it is wide. On the open Duo, DeviceHub's Device → Orientation menu is a quarter-turn off: choosing **Landscape Left** gives a portrait inner screen, and choosing **Portrait** gives a landscape one.
 
-| SDK  | Variant                     | Portrait                                                                                      | Landscape                                                                                      |
-| ---- | --------------------------- | --------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| 26.5 | No lock                     | <img src="screenshots/sdk26.5-min15.6--screen-portrait.png" height="250">                     | <img src="screenshots/sdk26.5-min15.6--screen-landscape.png" height="250"> |
-| 26.5 | Portrait lock               | <img src="screenshots/sdk26.5-min15.6-portrait--screen-portrait.png" height="250">            | <img src="screenshots/sdk26.5-min15.6-portrait--screen-landscape.png" height="250"> |
-| 26.5 | Portrait lock + full screen | <img src="screenshots/sdk26.5-min15.6-portrait-fullscreen--screen-portrait.png" height="250"> | <img src="screenshots/sdk26.5-min15.6-portrait-fullscreen--screen-landscape.png" height="250"> |
-| 27.0 | No lock                     | <img src="screenshots/sdk27.0-min15.6--screen-portrait.png" height="250">                     | <img src="screenshots/sdk27.0-min15.6--screen-landscape.png" height="250"> |
-| 27.0 | Portrait lock               | <img src="screenshots/sdk27.0-min15.6-portrait--screen-portrait.png" height="250">            | <img src="screenshots/sdk27.0-min15.6-portrait--screen-landscape.png" height="250"> |
-| 27.0 | Portrait lock + full screen | <img src="screenshots/sdk27.0-min15.6-portrait-fullscreen--screen-portrait.png" height="250"> | <img src="screenshots/sdk27.0-min15.6-portrait-fullscreen--screen-landscape.png" height="250"> |
-| 27.1 | No lock                     | <img src="screenshots/sdk27.1-min15.6--screen-portrait.png" height="250">                     | <img src="screenshots/sdk27.1-min15.6--screen-landscape.png" height="250"> |
-| 27.1 | Portrait lock               | <img src="screenshots/sdk27.1-min15.6-portrait--screen-portrait.png" height="250">            | <img src="screenshots/sdk27.1-min15.6-portrait--screen-landscape.png" height="250"> |
-| 27.1 | Portrait lock + full screen | <img src="screenshots/sdk27.1-min15.6-portrait-fullscreen--screen-portrait.png" height="250"> | <img src="screenshots/sdk27.1-min15.6-portrait-fullscreen--screen-landscape.png" height="250"> |
+| SDK  | Variant                     | Landscape                                                                                      | Portrait                                                                                      |
+| ---- | --------------------------- | ---------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| 26.5 | No lock                     | <img src="screenshots/sdk26.5-min15.6--screen-landscape.png" height="250"> | <img src="screenshots/sdk26.5-min15.6--screen-portrait.png" height="250">                     |
+| 26.5 | Portrait lock               | <img src="screenshots/sdk26.5-min15.6-portrait--screen-landscape.png" height="250"> | <img src="screenshots/sdk26.5-min15.6-portrait--screen-portrait.png" height="250">            |
+| 26.5 | Portrait lock + full screen | <img src="screenshots/sdk26.5-min15.6-portrait-fullscreen--screen-landscape.png" height="250"> | <img src="screenshots/sdk26.5-min15.6-portrait-fullscreen--screen-portrait.png" height="250"> |
+| 27.0 | No lock                     | <img src="screenshots/sdk27.0-min15.6--screen-landscape.png" height="250"> | <img src="screenshots/sdk27.0-min15.6--screen-portrait.png" height="250">                     |
+| 27.0 | Portrait lock               | <img src="screenshots/sdk27.0-min15.6-portrait--screen-landscape.png" height="250"> | <img src="screenshots/sdk27.0-min15.6-portrait--screen-portrait.png" height="250">            |
+| 27.0 | Portrait lock + full screen | <img src="screenshots/sdk27.0-min15.6-portrait-fullscreen--screen-landscape.png" height="250"> | <img src="screenshots/sdk27.0-min15.6-portrait-fullscreen--screen-portrait.png" height="250"> |
+| 27.1 | No lock                     | <img src="screenshots/sdk27.1-min15.6--screen-landscape.png" height="250"> | <img src="screenshots/sdk27.1-min15.6--screen-portrait.png" height="250">                     |
+| 27.1 | Portrait lock               | <img src="screenshots/sdk27.1-min15.6-portrait--screen-landscape.png" height="250"> | <img src="screenshots/sdk27.1-min15.6-portrait--screen-portrait.png" height="250">            |
+| 27.1 | Portrait lock + full screen | <img src="screenshots/sdk27.1-min15.6-portrait-fullscreen--screen-landscape.png" height="250"> | <img src="screenshots/sdk27.1-min15.6-portrait-fullscreen--screen-portrait.png" height="250"> |
 
 ### Differences
 
