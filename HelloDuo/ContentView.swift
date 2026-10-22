@@ -15,6 +15,7 @@ struct ContentView: View {
             row("Build SDK", info["DTSDKName"])
             row("Min iOS", info["MinimumOSVersion"])
             row("Orientations", info["UISupportedInterfaceOrientations~iphone"])
+            row("Requires full screen", info["UIRequiresFullScreen"])
         }
     }
 
@@ -32,6 +33,8 @@ struct ContentView: View {
         switch value {
         case nil:
             return "not set"
+        case let flag as Bool:
+            return flag ? "Yes" : "No"
         case let list as [String]:
             return list
                 .map { $0.replacingOccurrences(of: "UIInterfaceOrientation", with: "") }
