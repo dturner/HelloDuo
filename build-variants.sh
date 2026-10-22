@@ -4,6 +4,7 @@
 # A variant is a min iOS version followed by optional suffixes:
 #   -portrait    lock iPhone orientation to portrait
 #   -fullscreen  set UIRequiresFullScreen
+# Builds with the selected Xcode; set DEVELOPER_DIR to use another one.
 # Usage: ./build-variants.sh [variant...]
 #   (default: 15.6 15.6-portrait 15.6-portrait-fullscreen)
 set -euo pipefail
@@ -19,7 +20,7 @@ mkdir -p builds
 for VARIANT in "${VARIANTS[@]}"; do
     MIN="${VARIANT%%-*}"
     NAME="HelloDuo-sdk$SDK-min$VARIANT"
-    BUNDLE_ID="com.example.HelloDuo.min${MIN//./-}"
+    BUNDLE_ID="com.example.HelloDuo.sdk${SDK//./-}.min${MIN//./-}"
     DISPLAY_NAME="Duo $SDK"
     SUFFIX=""
     ORIENTATIONS="UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
