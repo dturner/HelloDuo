@@ -8,14 +8,37 @@
 import SwiftUI
 
 struct ContentView: View {
+    private let info = Bundle.main.infoDictionary ?? [:]
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        List {
+            row("Build SDK", info["DTSDKName"])
+            row("Min iOS", info["MinimumOSVersion"])
+            row("Orientations", info["UISupportedInterfaceOrientations~iphone"])
         }
-        .padding()
+    }
+
+    private func row(_ label: String, _ value: Any?) -> some View {
+        HStack(alignment: .firstTextBaseline) {
+            Text(label)
+            Spacer()
+            Text(describe(value))
+                .foregroundColor(.secondary)
+                .multilineTextAlignment(.trailing)
+        }
+    }
+
+    private func describe(_ value: Any?) -> String {
+        switch value {
+        case nil:
+            return "not set"
+        case let list as [String]:
+            return list
+                .map { $0.replacingOccurrences(of: "UIInterfaceOrientation", with: "") }
+                .joined(separator: "\n")
+        default:
+            return "\(value!)"
+        }
     }
 }
 
