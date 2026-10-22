@@ -18,13 +18,15 @@ To build with a specific Xcode:
 DEVELOPER_DIR=/Applications/Xcode-27.1.0.app/Contents/Developer ./build-variants.sh
 ```
 
-## iPhone Duo inner screen
+## iPhone Duo screenshots
 
-These screenshots were taken on the iPhone Duo simulator (iOS 27.1 runtime) with the device open. They are captured from the DeviceHub window, so they include the device frame. Each app was launched in portrait and then rotated to landscape while it was running.
+These screenshots were taken on the iPhone Duo simulator (iOS 27.1 runtime): open for the inner screen, closed for the outer screen. They are captured from the DeviceHub window, so they include the device frame. Each app was launched in portrait and then rotated to landscape while it was running.
 
-The inner screen is 951×669 points in landscape and 669×951 in portrait (2853×2007 pixels at 3× scale). Window sizes under each screenshot are the app window, in points, as drawn on screen, measured from full-resolution simulator screenshots.
+The inner screen is 951×669 points in landscape and 669×951 in portrait (2853×2007 pixels at 3× scale). The outer screen is 678×466 points in landscape and 466×678 in portrait (2034×1398 pixels at 3× scale). Window sizes under each screenshot are the app window, in points, as drawn on screen, measured from full-resolution simulator screenshots.
 
 ## SDK 26.5
+
+### Inner screen
 
 | Variant | Landscape | Portrait |
 | --- | --- | --- |
@@ -40,7 +42,21 @@ The inner screen is 951×669 points in landscape and 669×951 in portrait (2853�
   - The no-lock build also shows a rotate button, in both orientations.
 - **Portrait lock and `UIRequiresFullScreen` make no difference** to the window, apart from those buttons.
 
+### Outer screen
+
+| Variant | Landscape | Portrait |
+| --- | --- | --- |
+| No lock | <img src="screenshots/sdk26.5-min15.6--cover-landscape.png" height="250"><br>678×381 | <img src="screenshots/sdk26.5-min15.6--cover-portrait.png" height="250"><br>381×678 |
+| Portrait lock | <img src="screenshots/sdk26.5-min15.6-portrait--cover-landscape.png" height="250"><br>381×678, stays portrait | <img src="screenshots/sdk26.5-min15.6-portrait--cover-portrait.png" height="250"><br>381×678 |
+| Portrait lock + full screen | <img src="screenshots/sdk26.5-min15.6-portrait-fullscreen--cover-landscape.png" height="250"><br>381×678, stays portrait | <img src="screenshots/sdk26.5-min15.6-portrait-fullscreen--cover-portrait.png" height="250"><br>381×678 |
+
+- **The app fills the screen, minus the status bar.** There is no compatibility window on the outer screen. The window stops short of an 85-point black strip for the status bar: down the right side in portrait and along the top in landscape.
+- **Portrait lock works.** Portrait-locked builds stay portrait when the device is turned to landscape, as on a regular iPhone.
+- **`UIRequiresFullScreen` makes no difference.**
+
 ## SDK 27.0
+
+### Inner screen
 
 | Variant | Landscape | Portrait |
 | --- | --- | --- |
@@ -54,7 +70,21 @@ The inner screen is 951×669 points in landscape and 669×951 in portrait (2853�
   - That's the inner screen's portrait shape at the full landscape height. Content is drawn at normal size, not scaled.
   - Its window is roughly 25% wider (SDK 27: 469pt vs SDK 26: 376pt).
 
+### Outer screen
+
+| Variant | Landscape | Portrait |
+| --- | --- | --- |
+| No lock | <img src="screenshots/sdk27.0-min15.6--cover-landscape.png" height="250"><br>678×386 | <img src="screenshots/sdk27.0-min15.6--cover-portrait.png" height="250"><br>386×678 |
+| Portrait lock | <img src="screenshots/sdk27.0-min15.6-portrait--cover-landscape.png" height="250"><br>386×678, stays portrait | <img src="screenshots/sdk27.0-min15.6-portrait--cover-portrait.png" height="250"><br>386×678 |
+| Portrait lock + full screen | <img src="screenshots/sdk27.0-min15.6-portrait-fullscreen--cover-landscape.png" height="250"><br>386×678, stays portrait | <img src="screenshots/sdk27.0-min15.6-portrait-fullscreen--cover-portrait.png" height="250"><br>386×678 |
+
+- **The app fills the screen, minus the status bar.** The window stops short of an 80-point black strip for the status bar: down the right side in portrait and along the top in landscape.
+- **Portrait lock works.** Portrait-locked builds stay portrait when the device is turned to landscape, as on a regular iPhone.
+- **`UIRequiresFullScreen` makes no difference.**
+
 ## SDK 27.1
+
+### Inner screen
 
 | Variant | Landscape | Portrait |
 | --- | --- | --- |
@@ -67,3 +97,15 @@ The inner screen is 951×669 points in landscape and 669×951 in portrait (2853�
 - **Portrait lock plus `UIRequiresFullScreen` keeps the app in portrait.** In landscape the app stays portrait, centered with black bars on each side, as with SDK 27.0.
   - Its window is roughly 25% wider (SDK 27.1: 469pt vs SDK 26: 376pt).
   - Compared with 27.0, the app adds space above its content inside the portrait window.
+
+### Outer screen
+
+| Variant | Landscape | Portrait |
+| --- | --- | --- |
+| No lock | <img src="screenshots/sdk27.1-min15.6--cover-landscape.png" height="250"><br>678×466 (full screen) | <img src="screenshots/sdk27.1-min15.6--cover-portrait.png" height="250"><br>466×678 (full screen) |
+| Portrait lock | <img src="screenshots/sdk27.1-min15.6-portrait--cover-landscape.png" height="250"><br>466×678 (full screen), stays portrait | <img src="screenshots/sdk27.1-min15.6-portrait--cover-portrait.png" height="250"><br>466×678 (full screen) |
+| Portrait lock + full screen | <img src="screenshots/sdk27.1-min15.6-portrait-fullscreen--cover-landscape.png" height="250"><br>466×678 (full screen), stays portrait | <img src="screenshots/sdk27.1-min15.6-portrait-fullscreen--cover-portrait.png" height="250"><br>466×678 (full screen) |
+
+- **The app fills the whole screen.** It runs edge to edge, with the status bar drawn over the app. In landscape the camera cutout sits over the top-left of the content.
+- **Portrait lock works.** Portrait-locked builds stay portrait when the device is turned to landscape, as on a regular iPhone.
+- **`UIRequiresFullScreen` makes no difference.**
