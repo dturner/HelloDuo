@@ -22,7 +22,7 @@ for MIN in "${MIN_VERSIONS[@]}"; do
         -derivedDataPath "$DERIVED/$MIN" \
         IPHONEOS_DEPLOYMENT_TARGET="$MIN" \
         PRODUCT_BUNDLE_IDENTIFIER="com.example.HelloDuo.min${MIN//./-}" \
-        INFOPLIST_KEY_CFBundleDisplayName="Duo $MIN" \
+        INFOPLIST_KEY_CFBundleDisplayName="Duo $SDK" \
         build
     rm -rf "builds/$NAME.app"
     cp -R "$DERIVED/$MIN/Build/Products/Debug-iphonesimulator/HelloDuo.app" "builds/$NAME.app"
