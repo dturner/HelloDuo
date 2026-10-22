@@ -42,7 +42,7 @@ These screenshots were taken on the iPhone Duo simulator (iOS 27.1 runtime) with
   - Portrait lock and `UIRequiresFullScreen` make no visible difference, apart from those buttons.
 - **SDK 27.0 and 27.1 builds fill the inner screen**, except as noted below.
   - **Portrait lock on its own is ignored.** The portrait-locked app rotates to landscape and fills the screen, the same as the unlocked app.
-  - **Portrait lock plus `UIRequiresFullScreen` keeps the app in portrait.** In landscape the app stays portrait, centered with black bars on each side.
+  - **Portrait lock plus `UIRequiresFullScreen` keeps the app in portrait.** In landscape the app stays portrait, centered with black bars on each side. Its window is roughly 25% wider (SDK 27: 469pt vs SDK 26: 376pt).
 - **The status bar area differs between 27.0 and 27.1.**
   - **SDK 27.0:** the app window stops short of the status bar, leaving a black strip for it. The strip is along the top in portrait and down the right side in landscape.
   - **SDK 27.1:** the app runs edge to edge, with the status bar drawn over the app's background.
