@@ -3,15 +3,16 @@
 # ID and display name so they can be installed side by side.
 # A variant is a min iOS version followed by optional suffixes:
 #   -portrait    lock iPhone orientation to portrait
+#   -landscape   lock iPhone orientation to landscape
 #   -fullscreen  set UIRequiresFullScreen
 # Builds with the selected Xcode; set DEVELOPER_DIR to use another one.
 # Usage: ./build-variants.sh [variant...]
-#   (default: 15.6 15.6-portrait 15.6-portrait-fullscreen)
+#   (default: 15.6 15.6-portrait 15.6-portrait-fullscreen 15.6-landscape-fullscreen)
 set -euo pipefail
 
 cd "$(dirname "$0")"
 VARIANTS=("$@")
-[ $# -eq 0 ] && VARIANTS=(15.6 15.6-portrait 15.6-portrait-fullscreen)
+[ $# -eq 0 ] && VARIANTS=(15.6 15.6-portrait 15.6-portrait-fullscreen 15.6-landscape-fullscreen)
 SDK=$(xcrun --sdk iphonesimulator --show-sdk-version)
 DERIVED=$(mktemp -d)
 trap 'rm -rf "$DERIVED"' EXIT
@@ -29,6 +30,11 @@ for VARIANT in "${VARIANTS[@]}"; do
         BUNDLE_ID="$BUNDLE_ID.portrait"
         SUFFIX="${SUFFIX}P"
         ORIENTATIONS="UIInterfaceOrientationPortrait"
+    fi
+    if [[ "$VARIANT" == *-landscape* ]]; then
+        BUNDLE_ID="$BUNDLE_ID.landscape"
+        SUFFIX="${SUFFIX}L"
+        ORIENTATIONS="UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
     fi
     if [[ "$VARIANT" == *-fullscreen* ]]; then
         BUNDLE_ID="$BUNDLE_ID.fullscreen"
