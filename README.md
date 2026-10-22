@@ -22,8 +22,6 @@ DEVELOPER_DIR=/Applications/Xcode-27.1.0.app/Contents/Developer ./build-variants
 
 These screenshots were taken on the iPhone Duo simulator (iOS 27.1 runtime) with the device open. They are captured from the DeviceHub window, so they include the device frame. Each app was launched in portrait and then rotated to landscape while it was running.
 
-"Portrait" means the inner screen is taller than it is wide. On the open Duo, DeviceHub's Device → Orientation menu is a quarter-turn off: choosing **Landscape Left** gives a portrait inner screen, and choosing **Portrait** gives a landscape one.
-
 | SDK  | Variant                     | Landscape                                                                                      | Portrait                                                                                      |
 | ---- | --------------------------- | ---------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
 | 26.5 | No lock                     | <img src="screenshots/sdk26.5-min15.6--screen-landscape.png" height="250"> | <img src="screenshots/sdk26.5-min15.6--screen-portrait.png" height="250">                     |
