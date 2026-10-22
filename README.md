@@ -62,7 +62,7 @@ The inner screen is 951×669 points in landscape and 669×951 in portrait (2853�
 | Portrait lock | <img src="screenshots/sdk27.1-min15.6-portrait--screen-landscape.png" height="250"><br>951×669 (full screen) | <img src="screenshots/sdk27.1-min15.6-portrait--screen-portrait.png" height="250"><br>669×951 (full screen) |
 | Portrait lock + full screen | <img src="screenshots/sdk27.1-min15.6-portrait-fullscreen--screen-landscape.png" height="250"><br>469×669, centered | <img src="screenshots/sdk27.1-min15.6-portrait-fullscreen--screen-portrait.png" height="250"><br>669×951 (full screen) |
 
-- **The app fills the whole screen.** It runs edge to edge, with the status bar drawn over the app's background.
+- **Without `UIRequiresFullScreen` the app fills the whole screen.** It runs edge to edge, with the status bar drawn over the app's background.
 - **Portrait lock on its own is ignored.** The portrait-locked app rotates to landscape and fills the screen, the same as the unlocked app.
 - **Portrait lock plus `UIRequiresFullScreen` keeps the app in portrait.** In landscape the app stays portrait, centered with black bars on each side, as with SDK 27.0.
   - Its window is roughly 25% wider (SDK 27.1: 469pt vs SDK 26: 376pt).
