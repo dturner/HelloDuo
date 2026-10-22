@@ -1,6 +1,6 @@
 # HelloDuo
 
-A test app that shows the iOS SDK it was built with, its minimum iOS version, its iPhone orientations and whether `UIRequiresFullScreen` is set. It's used to compare how orientation settings behave on the iPhone Duo's inner screen.
+A test app that shows the iOS SDK it was built with, its minimum iOS version, its iPhone orientations and whether `UIRequiresFullScreen` is set. It's used to compare how orientation settings and the build SDK affect rotation and resizing on the iPhone Duo's inner screen: whether the app fills the screen, runs in a smaller window, or is letterboxed/pillarboxed.
 
 ## Build variants
 
